@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchFlow AI</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🧠 ResearchFlow AI</h1>
+        <p>Multi-Agent Research Assistant</p>
+    </header>
+
+    <section class="hero">
+        <h2>Research Smarter with AI Agents</h2>
+        <p>Researcher → Writer → Reviewer</p>
+
+        <input id="topic" type="text"
+               placeholder="Enter your research topic">
+
+        <button onclick="runResearch()">Run Research</button>
+        <p id="status">Ready to start your research</p>
+    </section>
+
+    <section class="agents">
+        <div class="card researcher">
+            <h3>🔍 Researcher Agent</h3>
+            <p id="researcher">Collects key information.</p>
+        </div>
+
+        <div class="card writer">
+            <h3>✍️ Writer Agent</h3>
+            <p id="writer">Creates a research summary.</p>
+        </div>
+
+        <div class="card reviewer">
+            <h3>🛡️ Reviewer Agent</h3>
+            <p id="reviewer">Checks reliability and errors.</p>
+        </div>
+    </section>
+
+    <section class="report">
+        <h2>📋 Reliability Checklist</h2>
+        <label><input type="checkbox"> Sources are reliable</label>
+        <label><input type="checkbox"> Facts are verified</label>
+        <label><input type="checkbox"> Outdated information checked</label>
+        <label><input type="checkbox"> Human review completed</label>
+        <p id="warning"></p>
+    </section>
+
+    <footer>ResearchFlow AI | CSE Capstone Project</footer>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
